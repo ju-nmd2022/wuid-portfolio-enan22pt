@@ -1,8 +1,27 @@
 h1 {
+animation-name:idk;
+animation-duration: 4s;
+animation-timing-function: ease-in-out;
+animation-delay: 0s;
+animation-iteration-count: 4;
+animation-fill-mode: forwards;
+margin-left: 200px;
+margin-top: 50px;
+position: absolute;
 text-decoration: underline;
+text-align: center;
 font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 font-style:italic;
 color: #FFFFFF;}
+
+@keyframes idk{
+    0% {color: #000000;
+    transform: scaleX(0);}
+    50%{color:#ffffff;
+    transform: scaleX(0.5);}
+    100% {color: #9d3a51;
+    transform: scaleX(1);}
+}
 
 h2 {
 text-align: center;
@@ -14,6 +33,31 @@ font-weight: bold;}
 .me {
     position: relative;
     float: left;}
+
+.cryingcat{
+    position: absolute;
+    margin-left:800px;
+    margin-top: 25px;
+    width: 300px;
+    height: 300px;}
+ .cryingcat:hover{
+        animation-name:surprise;
+        animation-duration: 2s;
+        animation-timing-function:ease-in-out;
+        animation-delay: 0s;
+        animation-iteration-count: 4;}
+
+@keyframes surprise{
+    0%{opacity: 100%;
+    transform: translateX(0px) scaleX(1) scaleY(1);}
+     50%{opacity: 50%;
+        transform: translateX(10vw) scaleX(0.5) scaleY(0.5);}
+    100%{opacity: 0%;
+    transform: translateX(50vw) scaleX(0) scaleY(0);}}
+        
+.moon{
+    height: 350px;
+    width: 700px;}
 
 h2, p {
     margin-left: 820px;
@@ -50,14 +94,21 @@ h5{
 @media screen and (max-width:1000px){
     h2, h3, h4, h5 {    margin-left: 5px; }
         p{margin-left: 5px;
-            margin-right: 5px;
+            margin-right:5px ;
             font-size: 20px;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             text-align: center;
         color:#FFFFFF,}
         .me{position:relative;
             width: 100%;
-            height: auto;}}
+            height: auto;}
+        .moon{
+            width: 100%;
+            height: auto;}
+        .cryingcat{
+            margin-left: 50px;
+            margin-top: 100px;
+        }}
 
 .container {
     display: flex;
@@ -111,6 +162,11 @@ margin-right: 20px;}
 
 
 @media screen and (max-width:750px){
+    h1{margin:auto;}
+    .cryingcat{
+        height: 150px;
+        width: 150px;
+        margin-top: 35px;}
     .container{    
         flex-direction: row;
         gap: 2rem;
@@ -148,9 +204,11 @@ justify-content:flex-start;}
         padding: right 50%;
         margin-left: 150px;
         align-items: center;
-        justify-content:space-evenly;}}           
-   
+        justify-content:space-evenly;}}
+
 @media screen and (max-width:1000px) {
 .uzumaki{position:relative;
     width: 100%;
     height: auto;}}
+       
+   
